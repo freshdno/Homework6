@@ -1,4 +1,5 @@
 FROM openjdk:21-ea-25-jdk-slim-bullseye
+RUN apt update -y
 RUN apt install maven -y
 RUN apt install tomcat9
 RUN mkdir /home/serega/homework6
