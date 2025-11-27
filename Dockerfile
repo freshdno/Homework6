@@ -6,7 +6,7 @@ RUN apt install curl -y
 RUN mkdir -p /root/homework6
 WORKDIR /opt
 RUN curl -O https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.112/bin/apache-tomcat-9.0.112.tar.gz
-RUN tar tar xzvf apache-tomcat-9.0.112.tar.gz -C /opt/tomcat/ --strip-component=1
+RUN tar xzvf apache-tomcat-9.0.112.tar.gz -C /opt/tomcat/ --strip-component=1
 WORKDIR cd /opt/tomcat/
 RUN chown -RH tomcat: /opt/tomcat/
 RUN sudo sh -c 'chmod +x /opt/tomcat/bin/*.sh'
