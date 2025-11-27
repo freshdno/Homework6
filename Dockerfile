@@ -12,6 +12,6 @@ WORKDIR cd /opt/tomcat/
 RUN sh -c 'chmod +x /opt/tomcat/bin/*.sh'
 RUN cd /root/homework6 && git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 RUN cd /root/homework6/boxfuse-sample-java-war-hello && mvn package
-RUN cp /root/homework6/boxfuse-sample-java-war-hello/target/hello-1.0.war /var/lib/tomcat9/webapps
+RUN cp /root/homework6/boxfuse-sample-java-war-hello/target/hello-1.0.war /opt/tomcat/webapps
 EXPOSE 8080
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
